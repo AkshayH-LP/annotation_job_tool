@@ -65,6 +65,8 @@ def csv_to_js(df, levels = 2):
     return js_dict
 
 def create_tax_js(path, name):
+    ### Create .js file of the taxonomy
+
     js_dict = csv_to_js(get_fig8_data(get_data(path), 2), 2)
     with open(str(name) + '.js', 'a') as outfile: 
         outfile.write("var "+ str(name) +" = " + str(json.dumps(js_dict))+";")

@@ -7,7 +7,8 @@ from oauth2client import file, client, tools
 SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly'
 
 def main():
-    """Shows basic usage of the Drive v3 API.
+    """
+    Code to get tokens and credentials for the g_drive API
     Prints the names and ids of the first 10 files the user has access to.
     """
     # The file token.json stores the user's access and refresh tokens, and is

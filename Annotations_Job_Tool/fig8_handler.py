@@ -8,6 +8,7 @@ API_KEY = '2B3PrX2NVQzCBJN5Byd6'
 #job instructuons must be in HTML format 
 
 def create_job(name, API_KEY):  
+    ### Create a new job with name and returns the job id
     with open('data/' + str(path), 'rb') as instructions:
 
     headers = {'content-type': 'application/json'}

@@ -39,6 +39,7 @@ class Google_handler:
 
     #### Download csv from file_id
     def download_file(self, file_id, name, data_type = 'csv'):
+        ### Donwload file with the prescribed format
         if data_type == 'csv':
             request = self.drive_service.files().get_media(fileId = file_id)
             fh = io.BytesIO()
@@ -99,6 +100,8 @@ class Google_handler:
 
     ### Get Id of folder with name as name in folder with id == Parent_id
     def get_id(self, name, parent_id = taxonomy_id, data_type = 'folder'):
+        ### Get g_drive id of the folder
+
         if data_type == 'folder':
             mimeType = 'application/vnd.google-apps.folder'
         if data_type == 'csv':

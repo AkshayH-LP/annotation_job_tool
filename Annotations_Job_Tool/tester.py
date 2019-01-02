@@ -1,7 +1,7 @@
 from google_handler import *
 from report_handler import *
 from smartlogic_handler import *
-from fig8_handler import *
+# from fig8_handler import *
 from s3_handler import *
 
 # from api_example import figure8_handler
@@ -12,13 +12,25 @@ import time
 
 
 
-g_d = Google_handler()
+# g_d = Google_handler()
 #print (g_d.get_id('telco_tmobile','1M28OzKiFVK9WaQAqjIXOmHk-Vt43rg8YrULjRGIX1zA', 'instructions'))
 # print (g_d.download_file('1M28OzKiFVK9WaQAqjIXOmHk-Vt43rg8YrULjRGIX1zA', 'instructions_from_drive.txt', data_type = 'instructions'))
 #1NRAHlky18Vq4aQVCj96eYDk8-1vuredQ
 #10six9WJQVlD4Zd47qYd7MtALa4Onit7I
 #doc - 1M28OzKiFVK9WaQAqjIXOmHk-Vt43rg8YrULjRGIX1zA
 
+# s3_handler = s3_handler()
+# s3_handler.host_to_s3('tax.js')
+# print(s3_handler.get_file_link('tax.js'))
+
+# session = boto3.Session(
+#             aws_access_key_id='AKIAJSFOZIAPAOWR2STA',
+#             aws_secret_access_key='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', 
+#             region_name = 'us-west-2')
+# s3_resource = session.resource('s3')
+# first_bucket_name = 'taxonomies-lp'
+# s3_resource.Object(first_bucket_name, 'tax.js').upload_file(
+#         Filename='tax.js')
 
 
 
