@@ -70,10 +70,6 @@ class Google_handler:
         
         return 200
 
-    def upload_file(self, name): 
-        request = self.drive_service.files().list().execute()
-        return 
-
 
     ### Create branch in Tree on Drive for the job
     def create_batch_folder(self, mode, vertical, brand, batch, cit):

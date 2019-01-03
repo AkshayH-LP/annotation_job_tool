@@ -21,7 +21,7 @@ class s3_handler():
 
     def upload_to_s3(self, first_file_name):
 
-        ### Upload the given file to s3
+        ### Upload the file mentioned by its file_name to s3
 
         self.s3_resource.Object(self.first_bucket_name, first_file_name).upload_file(
         Filename=first_file_name)

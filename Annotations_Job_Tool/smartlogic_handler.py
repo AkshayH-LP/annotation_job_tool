@@ -4,6 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 def get_data(path):
+    ### Load data from Hierarchal report with details
     df = pd.read_csv(path)
     df = df[['level1', 'level2', 'metadata_definition_en_displayName']]
     df = df.iloc[1:]
@@ -13,7 +14,9 @@ def get_data(path):
     df['summary'] = df['summary'].apply(lambda x: regex_parser.sub('', x)).apply(lambda x: x.replace("'",""))
     return df
 
+
 def get_fig8_data(df, levels = 3):
+    ## Reformat the data in the order of levels for every intent 
     def recursive_rw_check(prev, idx, row, level):
         for i in range(len(level)):
             if row['level' + str(i+1)] == 'None' and prev == False:
@@ -30,6 +33,7 @@ def get_fig8_data(df, levels = 3):
     return df
 
 def csv_to_js(df, levels = 2):
+    ### Convert the contents of the csv to the js file
     cols = df.columns
     top_level = []
     taxonomy_items = {}
